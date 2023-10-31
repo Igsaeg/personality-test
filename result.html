@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="scirpt/style.css">
+</head>
+<body>
+    <div id="main">
+        <h1 id="conclusion">Personality test</h1>
+        <p id="explanation">Find out your personality.</p>
+    </div>
+    
+    <script>
+        window.onload = () => {
+            let personality = localStorage.getItem('personality');
+            document.getElementById('conclusion').innerHTML = response[personality].main;
+            document.getElementById('explanation').innerHTML = response[personality].sub;
+        }
+    </script>
+    <script src="scirpt/data.js"></script>
+</body>
+</html>
